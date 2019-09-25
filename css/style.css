@@ -1,61 +1,42 @@
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-  background-color: #ddd;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
-}
-
-h1{
-  font-size: 50px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
-}
-
-h2{
-  font-size: 32px;
-  line-height: 1.5;
-}
-
 nav ul{
   list-style-type: none;
 }
 
 nav li{
-  /*Your code here */
+  padding-right: 20px;
+  display: inline;
 }
 
 nav a{
   color: black;
   font-weight: bold;
-  text-decoration: /*Your code here - remove the underline*/;
+  text-decoration: none;
 }
 
 nav a:hover{
-  text-decoration: /*Your code here - add the underline*/;
+  text-decoration: underline;
 }
 
 .skip a{
   background: white;
   left: 0;
   padding: 6px;
-  position: /*Your code here - position relative to the parent */;
-  top:      /*Your code here - place 40px higher */;
+  position: absolute;
+  top: -40px;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
 }
 
-/*Your code here*/{
+.skip :focus{
 /*Add the selector and rule to move the skip link to the exact top.*/
+  top: 0;
+  margin: auto;
+  transition: none;
 }
 
-/*Your code here*/{
-/*Add the selector and code to put a 2px black border around all elements in focus.*/
+:focus{
+  border: 2px solid black;
 }
 
 
