@@ -1,3 +1,26 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+background-color: #ddd;
+font-size: 18px;
+margin: 0;
+padding: 0;
+}
+
+h1{
+font-size: 50px;
+line-height: 1;
+padding: 50px 0;
+text-align: center;
+}
+
+h2{
+font-size: 32px;
+line-height: 1.5;
+}
+
 nav ul{
   list-style-type: none;
 }
@@ -29,7 +52,7 @@ nav a:hover{
 }
 
 .skip :focus{
-/*Add the selector and rule to move the skip link to the exact top.*/
+  position: absolute;
   top: 0;
   margin: auto;
   transition: none;
