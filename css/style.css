@@ -53,7 +53,6 @@ nav a:hover{
 
 .skip :focus{
   top: 0;
-  transition: none;
 }
 
 :focus{
@@ -64,16 +63,17 @@ nav a:hover{
 footer{
   background-color: black;
   color: white;
-  grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  grid-column: 1 / -1;  /*element begins in column 1 and spans the full page*/
+  grid-row: 7 / span 1;   
   padding-top: 30px;
   text-align: center;
 }
 
 
 .container{
-
-  /*Your code here  */
+  display: grid;
+  grid-template-columns: 100px 500px 100px;
+  row-gap: 15px;
 
   /*Provided*/
   grid-template-rows: 30px auto auto auto auto auto 100px; 
@@ -81,24 +81,24 @@ footer{
 }
 
 .nav{
-   /*Your code here */
-
+  grid-area: 1/1/span 1/-1;
   /*Provided*/
   background-color: #ddd;
   padding: 20px 0; 
   text-align: left; 
+  vertical-align: middle;
 }
 
 header{
   background-attachment: fixed; /* Parallax effect */
-  background-image: url();      /* Your code here - Link to header.jpg in the images folder */
+  background-image: url("../images/header.jpg");      /*Link to header.jpg in the images folder */
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
   color: white;
   height: 400px;                /* Parallax effect */
 
-  /*Your code here - cover the entire row*/
+  grid-area: 2/1/span 1/-1;
 }
 
 header p{
@@ -109,42 +109,52 @@ header p{
 }
 
 .about-image{
-  /*Your code here */
-
+  grid-area: 3/1/span 1/-1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .about{
-  /*Your code here */
+  display: grid;
+  grid-area: 3/2/span 1/span 1;
 }
 
 .method-image{
-  /*Your code here */
+  grid-area: 4/1/span 1/-1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .method{
-    /*Your code here - start in the 2nd column*/
+    display: grid;
+    grid-area: 4/2/span 1/span 1;
 }
 
 .clients-image{
- /*Your code here */
+  grid-area: 5/1/span 1/-1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .clients{
- /*Your code here */
+  display: grid;
+  grid-area: 5/2/span 1/span1;
 }
 
 .contact-image{
-   /*Your code here */
+  grid-area: 6/1/span 1/-1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .contact{
-   /*Your code here */
+  display: grid;
+  grid-area: 6/2/span 1/span1;
 }
 
 .text-block{
-
-   /*Your code here */
-  
+  place-self: center;
+  grid-column: 2;
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
@@ -156,13 +166,13 @@ header p{
 
   .container{
     /*Your code here */
-    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;*/
+    /*grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;*/
   }
 
   .nav{
-    background-color: #ddd;
 
-     /*Your code here */
+    background-color: #ddd;
+    
   }
 
   .about-image{
@@ -211,12 +221,12 @@ header p{
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: /* Your code here - set to default setting */
-    transition: /* Your code here - set to default setting */
+    -webkit-transition: none;
+    transition: none;
     z-index: 1;
   }
 
   .skip a:focus{
-    top:0;
+    top: 0;
   }
 }
