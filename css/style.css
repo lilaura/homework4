@@ -188,7 +188,7 @@ header p{
     }
 
   .about{
-    grid-area: 3/2/span 1/span 2;
+    grid-area: 3/3/span 1/span 2;
   }
 
   .method-image{
