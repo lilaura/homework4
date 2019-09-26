@@ -175,16 +175,13 @@ header p{
   justify-self: right;
   align-self: center;
   grid-area: 1/1/span 1/-1;
-  /*Provided*/
-  background-color: #ddd;
+
   padding: 35px 0; 
   text-align: rigth;
   }
 
   .about-image{
     grid-area: 3/2/span 1/span 2;
-    max-height: 700px;
-    overflow: hidden;
     }
 
   .about{
@@ -193,8 +190,6 @@ header p{
 
   .method-image{
     grid-area: 4/3/span 1/span 2;
-    max-height: 700px;
-    overflow: hidden;
   }
 
   .method{
@@ -203,8 +198,6 @@ header p{
 
   .clients-image{
     grid-area: 5/2/span 1/span 2;
-    max-height: 700px;
-    overflow: hidden;
   }
 
   .clients{
@@ -213,8 +206,6 @@ header p{
 
   .contact-image{
     grid-area: 6/3/span 1/span 2;
-    max-height: 700px;
-    overflow: hidden;
   }
 
   .contact{
