@@ -81,12 +81,13 @@ footer{
 }
 
 .nav{
+  justify-self: left;
+  align-self: center;
   grid-area: 1/1/span 1/-1;
   /*Provided*/
   background-color: #ddd;
   padding: 20px 0; 
   text-align: left; 
-  vertical-align: middle;
 }
 
 header{
@@ -162,50 +163,62 @@ header p{
 
 
 
-@media /*Your code here - Add the first media query.*/{
+@media screen and (min-width: 800px){
 
   .container{
-    /*Your code here */
-    /*grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;*/
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
   }
 
   .nav{
-
-    background-color: #ddd;
-    
+  justify-self: right;
+  align-self: center;
+  grid-area: 1/1/span 1/-1;
+  /*Provided*/
+  background-color: #ddd;
+  padding: 35px 0; 
+  text-align: rigth;
   }
 
   .about-image{
-     /*Your code here */
+    grid-area: 3/2/span 1/span 2;
+    max-height: 700px;
+    overflow: hidden;
     }
 
   .about{
-    /*Your code here */
+    grid-area: 3/2/span 1/span 2;
   }
 
   .method-image{
-    /*Your code here */
+    grid-area: 4/3/span 1/span 2;
+    max-height: 700px;
+    overflow: hidden;
   }
 
   .method{
-    /*Your code here */
+    grid-area: 4/2/span 1/span 2;
   }
 
   .clients-image{
-    /*Your code here */
-
+    grid-area: 5/2/span 1/span 2;
+    max-height: 700px;
+    overflow: hidden;
   }
 
   .clients{
-    /*Your code here */
+    grid-area: 5/3/span 1/span 2;
   }
 
   .contact-image{
-    /*Your code here */
+    grid-area: 6/3/span 1/span 2;
+    max-height: 700px;
+    overflow: hidden;
   }
 
   .contact{
-    /*Your code here */
+    grid-area: 6/2/span 1/span 2;
    }
 
 }  /*End the media query*/
